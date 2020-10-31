@@ -12,6 +12,9 @@
     "cross-env": "^5.2.0",
     "cssnano": "^4.1.10",
     "del": "^4.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-cli": "^2.2.0",
@@ -26,6 +29,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-useref": "^3.1.6",
     "mocha": "^6.2.3",
+    "prettier": "^2.1.2",
     "yargs": "13.2.4"
   },
   "scripts": {
