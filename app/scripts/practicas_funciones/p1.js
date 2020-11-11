@@ -16,16 +16,10 @@ do {
   }
 } while (vacio == false);
 
-//Guardo todo el conjunto en un array
 const palabrasArray = [...palabras];
-
-//Ordeno el array con las palabras por orden alfabético
 palabrasArray.sort((a, b) => a.localeCompare(b, 'es'));
-
-//Invierto el array
 palabrasArray.reverse();
 
-//Muestro los valores del array por consola
 for (i = 0; i < palabrasArray.length; i++) {
   console.log(palabrasArray[i]);
 }

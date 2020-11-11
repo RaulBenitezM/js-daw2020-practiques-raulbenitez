@@ -1,8 +1,8 @@
+//Por cada palabra introducida, si existe en el mapa que se crea en la función, sumo 1 a su valor,
+//y si no existe en el mapa, añado la palabra con valor 1
 function palabrasRepetidas(array) {
   let numRepetidas = new Map();
 
-  //Por cada palabra introducida si existe en el mapa creado en la linea anterior, sumo 1 a su valor,
-  //si no existe en el mapa, añado la palabra con valor 1
   for (let i = 0; i < array.length; i++) {
     if (numRepetidas.has(array[i])) {
       let valor = numRepetidas.get(array[i]);
@@ -38,7 +38,6 @@ do {
 
 let numPalabrasRepetidas = palabrasRepetidas(palabras);
 
-//Muestro por cada elemento del mapa su clave (palabra) y su valor (veces que se repite esa palabra)
 numPalabrasRepetidas.forEach(function (num, palabra) {
   console.log('La palabra ' + palabra + ' se repite ' + num + ' vez/veces.');
 });
