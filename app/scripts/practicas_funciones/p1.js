@@ -21,5 +21,5 @@ palabrasArray.sort((a, b) => a.localeCompare(b, 'es'));
 palabrasArray.reverse();
 
 for (i = 0; i < palabrasArray.length; i++) {
-  console.log(palabrasArray[i]);
+  document.write(palabrasArray[i] + '<br>');
 }

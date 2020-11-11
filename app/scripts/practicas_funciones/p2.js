@@ -39,7 +39,9 @@ do {
 let numPalabrasRepetidas = palabrasRepetidas(palabras);
 
 numPalabrasRepetidas.forEach(function (num, palabra) {
-  console.log('La palabra ' + palabra + ' se repite ' + num + ' vez/veces.');
+  document.write(
+    'La palabra ' + palabra + ' se repite ' + num + ' vez/veces.' + '<br>'
+  );
 });
 
 module.exports.palabrasRepetidas = palabrasRepetidas;
