@@ -33,3 +33,8 @@ let punto3 = punto1.suma(punto2);
 console.log(
   'Punto3 (suma de Punto1 y Punto2): X=' + punto3.x + ', Y=' + punto3.y
 );
+
+//Test pasar solo un valor
+let punto4 = new Punto(5);
+
+console.log('Punto4 (con solo un valor): X=' + punto4.x + ', Y=' + punto4.y);
