@@ -11,8 +11,12 @@ function expiracionCookie(dias) {
   return expires;
 }
 
+//Separo la cookie en nombre y valor
 let [nombre, valor] = document.cookie.split('=');
 
+//Si la cookie no existe, se crea con valor 1 y expiración en un mes
+//En cambio, si existe pero el valor es superior a 9, el valor se reestablece a 0 y se borra la cookie
+//Por último, si no pasa nada de lo anterior, el valor de la cookie se incrementa en 1
 if (nombre === '') {
   valor = 1;
   document.cookie =
@@ -29,4 +33,5 @@ if (nombre === '') {
 
 let textoContador = document.createTextNode(valor);
 
+//Muestro el valor de la cookie en el documento HTML
 document.getElementById('contador').appendChild(textoContador);
