@@ -5,7 +5,7 @@
 function temporizador(miliseg) {
   return new Promise(function (resolver, rechazar) {
     setTimeout(() => {
-      //resolver('Tiempo concluido');
+      resolver('Tiempo concluido');
     }, miliseg);
 
     setTimeout(() => {
