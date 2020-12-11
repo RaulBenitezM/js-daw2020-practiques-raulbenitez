@@ -28,25 +28,22 @@ async function cuenta(
   intervalo = 1000,
   callback
 ) {
-  //Mientras que el contador sea mayor que 0, cada vez que se ejecute el "setTimeout()" de la promesa,
-  //si esta se ejecuta correctamente mostrará el número en el documento HTML
-  while (numCuenta > 0) {
-    let promesa = new Promise(function (resolver, rechazar) {
+  //Mientras que el contador sea mayor o igual que 0, cada vez que se ejecute el "setTimeout()" de la promesa,
+  //si esta se ejecuta correctamente mostrará el número en el documento HTML y restará uno a este
+  while (numCuenta >= 0) {
+    let promesa = new Promise(function (resolver) {
       setTimeout(() => {
         resolver();
       }, intervalo);
-
-      //Si falla el contador, responderá en la consola el mensaje "Algo ha fallado"
-      rechazar('Algo ha fallado');
     });
 
     await promesa
       .then(() => {
-        numCuenta--;
         elemento.innerHTML = numCuenta;
+        numCuenta--;
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
       });
   }
 
