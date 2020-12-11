@@ -31,7 +31,7 @@ async function cuenta(
   //Mientras que el contador sea mayor o igual que 0, cada vez que se ejecute el "setTimeout()" de la promesa,
   //si esta se ejecuta correctamente mostrará el número en el documento HTML y restará uno a este
   while (numCuenta >= 0) {
-    let promesa = new Promise(function (resolver) {
+    let promesa = new Promise(function (resolver, rechazar) {
       setTimeout(() => {
         resolver();
       }, intervalo);
