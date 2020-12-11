@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Práctica Conceptos Avanzados 2</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <p id="segundos"></p>
+        <p id="decimas"></p>
+        <script type="module">
+            import * as temp from "./scripts/practicas_conceptosAvanzados/temporizador.js";
+
+            //Recojo los dos párrafos que necesito, creados en el HTML, y los guardo en variables
+            let p1 = document.getElementById("segundos");
+            let p2 = document.getElementById("decimas");
+
+            //Llamo a la función cuenta que he importado pasandole los parámetros para que haga 2 contadores
+            temp.cuenta(6, p1);
+            temp.cuenta(60, p2, 100, () => (p2.innerHTML = "FIN"));
+        </script>
+    </body>
+</html>
