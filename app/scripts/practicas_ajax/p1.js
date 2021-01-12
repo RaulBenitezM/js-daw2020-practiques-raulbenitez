@@ -58,8 +58,8 @@ function procesarFetch(numsecs, user) {
         .then((response) => {
           return response.json();
         })
-        .then((json) => {
-          campoName.innerHTML = json.json.first_name;
+        .then((mensajeJson) => {
+          campoName.innerHTML = mensajeJson.json.first_name;
           campoStatus.innerHTML = 200;
         });
     })
