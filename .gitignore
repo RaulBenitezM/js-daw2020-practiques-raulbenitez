@@ -11,3 +11,9 @@ bower_components
 Thumbs.db
 
 .vscode
+
+# Archivos de pruebas
+
+# Ajax
+app/12.ajax.p1_async.html
+app/scripts/practicas_ajax/p1_async.js
