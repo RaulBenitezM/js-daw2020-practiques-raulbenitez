@@ -1,8 +1,8 @@
-let video = document.getElementById('video');
+const video = document.getElementById('video');
 let pDuracion = document.getElementById('duracion');
 
 //Cuando se haga click izquierdo en el video se pausará o reanudará.
-video.addEventListener('click', (ev) => {
+video.addEventListener('click', () => {
   if (video.paused) video.play();
   else video.pause();
 });

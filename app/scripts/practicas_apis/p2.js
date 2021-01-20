@@ -18,7 +18,7 @@ function mostrarNotifVideo() {
     body: 'Se ha publicado un nuevo vídeo!',
   });
 
-  notif.addEventListener('click', (ev) => {
+  notif.addEventListener('click', () => {
     window.open('/app/13.apis.p2-video.html');
   });
 }
@@ -30,7 +30,6 @@ function mostrarNotifVideo() {
 async function cuentaAtras() {
   let temp = document.getElementById('temp');
   let num = 5;
-  temp.innerHTML = num;
 
   while (num > 0) {
     let promesa = temporizador(1000);
@@ -50,7 +49,7 @@ async function cuentaAtras() {
 }
 
 //Se pide permiso al usuario para recibir notificaciones solo si hace falta
-let permisoNotif = Notification.permission;
+const permisoNotif = Notification.permission;
 
 if (permisoNotif == 'default') {
   Notification.requestPermission();
