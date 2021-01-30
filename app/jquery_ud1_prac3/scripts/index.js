@@ -1,4 +1,5 @@
 $(() => {
+  //Código de la práctica 2
   $('#selected-plays>li').addClass('horizontal');
 
   $('#selected-plays>li>*').addClass('sub-level');
@@ -16,9 +17,10 @@ $(() => {
   $('table tr td:contains("Henry")').addClass('highlight');
 
   //Código nuevo para la práctica 3
-
+  //Punto 1
   $('table tr td:contains("Henry")').next().addClass('highlight');
 
+  //Punto 2
   $('table:nth-of-type(1) tr td:contains("et")')
     .nextAll()
     .addClass('highlight');
